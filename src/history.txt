@@ -1,0 +1,30 @@
+//Field Perimeter
+		fieldComponents = new ArrayList<DrawableLine>();
+		fieldComponents.add(new DrawableLine(fieldX-pWidth,fieldY-pWidth,(fieldWidth+pWidth)/3+offSet,fieldY-pWidth,Color.BLUE));
+		fieldComponents.add(new DrawableLine((fieldX-pWidth)+(fieldWidth+pWidth)/3-offSet,fieldY-pWidth,(fieldWidth+pWidth)/3*2+offSet,fieldY-pWidth,Color.WHITE)); //Outer top
+		fieldComponents.add(new DrawableLine((fieldX-pWidth)+(fieldWidth+pWidth)/3*2-offSet,fieldY-pWidth,fieldWidth+pWidth,fieldY-pWidth,Color.RED));
+		fieldComponents.add(new DrawableLine(fieldX,fieldY,(fieldWidth)/3+offSet,fieldY,Color.BLUE));
+		fieldComponents.add(new DrawableLine((fieldX)+(fieldWidth)/3-offSet,fieldY,(fieldWidth)/3*2+offSet,fieldY,Color.WHITE)); //Outer top
+		fieldComponents.add(new DrawableLine((fieldX)+(fieldWidth)/3*2-offSet,fieldY,fieldWidth,fieldY,Color.RED));
+		for(int i = 0; i < strutsWidth; i++) {
+			fieldComponents.add(new DrawableLine(offSet+(fieldWidth-offSet)/strutsWidth*i,fieldY-pWidth,fieldX+(fieldWidth-offSet)/strutsWidth*i,fieldY,Color.WHITE)); //Top attachments
+		}
+		fieldComponents.add(new DrawableLine(fieldWidth+pWidth,fieldY-pWidth,fieldWidth+pWidth,fieldHeight+pWidth,Color.WHITE)); //Outer right
+		fieldComponents.add(new DrawableLine(fieldWidth,fieldY,fieldWidth,fieldHeight,Color.WHITE)); //Inner right
+		for(int i = 0; i < strutsHeight; i++) {
+			fieldComponents.add(new DrawableLine(fieldX+fieldWidth-offSet+pWidth,offSet+(fieldHeight-offSet)/strutsHeight*i,fieldX+fieldWidth-offSet,fieldY+(fieldHeight-offSet)/strutsHeight*i,Color.WHITE)); //Right attachments
+		}
+		fieldComponents.add(new DrawableLine(fieldX+pWidth,fieldHeight+pWidth,(fieldWidth+pWidth)/3+offSet,fieldHeight+pWidth,Color.BLUE));
+		fieldComponents.add(new DrawableLine((fieldX+pWidth)+(fieldWidth+pWidth)/3-offSet,fieldHeight+pWidth,(fieldWidth+pWidth)/3*2+offSet,fieldHeight+pWidth,Color.WHITE)); //Outer top
+		fieldComponents.add(new DrawableLine((fieldX+pWidth)+(fieldWidth+pWidth)/3*2-offSet,fieldHeight+pWidth,fieldWidth+pWidth,fieldHeight+pWidth,Color.RED));
+		fieldComponents.add(new DrawableLine(fieldX,fieldHeight,(fieldWidth)/3+offSet,fieldHeight,Color.BLUE));
+		fieldComponents.add(new DrawableLine((fieldX)+(fieldWidth)/3-offSet,fieldHeight,(fieldWidth)/3*2+offSet,fieldHeight,Color.WHITE)); //Outer top
+		fieldComponents.add(new DrawableLine((fieldX)+(fieldWidth)/3*2-offSet,fieldHeight,fieldWidth,fieldHeight,Color.RED));
+		for(int i = 0; i < strutsWidth; i++) {
+			fieldComponents.add(new DrawableLine(offSet+(fieldWidth-offSet)/strutsWidth*i,fieldY+fieldHeight-offSet+pWidth,fieldX+(fieldWidth-offSet)/strutsWidth*i,fieldY+fieldHeight-offSet,Color.WHITE)); //Bottom attachments
+		}
+		fieldComponents.add(new DrawableLine(fieldX-pWidth,fieldHeight+pWidth,fieldX-pWidth,fieldY-pWidth,Color.WHITE)); //Outer left
+		fieldComponents.add(new DrawableLine(fieldX,fieldHeight,fieldX,fieldY,Color.WHITE)); //Inner left
+		for(int i = 0; i < strutsHeight; i++) {
+			fieldComponents.add(new DrawableLine(fieldX-pWidth,offSet+(fieldHeight-offSet)/strutsHeight*i,fieldX,fieldY+(fieldHeight-offSet)/strutsHeight*i,Color.WHITE)); //Left attachments
+		}
